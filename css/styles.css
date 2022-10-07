@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.light{
+    --logo-fill: #22355E;
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #217C97;
+    --color-bg-hover: #d8d8d8;
+    --color-font-primary: #FC4067;
+    --color-font-secondary: #15262E;
+    --color-font-dark: #000000;
+    --color-font-light: #ffffff;
+    --color-border-primary: #15262E;
+    --color-border-secondary: #2C6693;
+    --color-circle-primary: #F3D2F2;
+    --color-mode: #2C6693;
+    --color-bg-footer: #2e343d;
+    --color-bg-menu-responsivo: #ffffff;
+    --color-menu-icon: #15262E;
+}
+
+.dark{
+    --logo-fill: #FFFFFF;
+    --color-bg-primary: #242A38;
+    --color-bg-secondary: #217C97;
+    --color-bg-hover: #d8d8d8;
+    --color-bg-footer: #2e343d;
+    --color-font-primary: #2f92f0;
+    --color-font-secondary: #fff;
+    --color-font-dark: #fff;
+    --color-font-light: #ffffff;
+    --color-border-primary: #fff;
+    --color-border-secondary: #fff;
+    --color-circle-primary: #F3D2F2;
+    --color-mode: #fff;
+    --color-bg-menu-responsivo: #242A38;
+    --color-menu-icon: #FFFFFF;
+}
+
+body{
+    background-color: var(--color-bg-primary);
+}

@@ -1,0 +1,59 @@
+.artigosList{
+    padding-top: 15vh;
+    width: 97.5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 30vw));
+    row-gap: 2em;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    padding-left: 2.5vw;
+}
+
+.card{ 
+	box-shadow:0px 15px 15px rgba(0, 0, 0, 0.267);
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	width:300px;
+    display: block;
+    color: var(--color-font-secondary);
+	height: 200px;
+    justify-content: end;
+	border-top-left-radius:15px;
+	border-top-right-radius:15px;
+	border-bottom-left-radius:15px;
+	border-bottom-right-radius:15px;
+}
+
+.imgCard{
+    height: 60%;
+}
+.textosCard{
+    background-color: var(--color-bg-primary);
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: Roboto;
+    margin-top: 1px;
+    border-bottom-left-radius:15px;
+	border-bottom-right-radius:15px;
+}
+
+.tituloCard{
+    font-weight: 500;
+    font-size: 1em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.dataCard{
+    text-align: center;
+    margin-top: 0.5%;
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+.NomeAutor{
+    font-size: 0.90em;
+}
