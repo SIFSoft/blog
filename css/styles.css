@@ -9,6 +9,14 @@ html{
     scroll-behavior: smooth;
 }
 
+Main{
+    background-image: url("../imgs/bg.svg");
+    background-position-y: -15vh;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-color: var(--color-bg-secondary);
+}
+
 .light{
     --logo-fill: #22355E;
     --color-bg-primary: #ffffff;

@@ -1,8 +1,15 @@
 .artigo{
-    padding-top: 15vh;
+    padding-top: 20vh;
     font-family: Roboto;
-    margin: 1.2em;
+    margin: 2em;
+    width: 85vw;
+    max-width: 950px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: var(--color-bg-primary);
     margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .classTitulo{
     width: 100%;
@@ -34,7 +41,7 @@ img{
 
 .ArtigoTexto{
     color: var(--color-font-dark);
-    width: 90%;
+    width: 100%;
     text-align: justify;
 }
 
@@ -48,4 +55,20 @@ ol{
     margin-left: 2em;
 }
 
-
+.autorBox{
+    font-size: 0.85rem;
+    display: flex;
+    font-family: Roboto;
+    font-weight: 400;
+    width: 100%;
+    border: 2px solid var(--color-border-secondary);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-width: 0 0 2px 0;
+}
+.autorBox p{
+    margin-left: 3%;
+}
+#nomeAutor{
+    margin-left: 10px;
+}
