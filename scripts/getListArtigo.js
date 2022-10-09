@@ -6,7 +6,7 @@ async function getAllArtigo(){
     data.reverse()
 
     data.map((artigo) =>{
-        document.getElementById("artigoGrid").innerHTML += `<a class="cardArtigo" href="artigo/#${artigo.slug}"> 
+        document.getElementById("artigoGrid").innerHTML += `<a class="cardArtigo" href="artigo/?${artigo.slug}"> 
             <div class="card">
               <div class="imgCard"></div>
               <div class="textosCard">

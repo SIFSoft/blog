@@ -4,6 +4,7 @@ Main{
 }
 .artigosList{
     padding-top: 15vh;
+    padding-bottom: 5vh;
     width: 97.5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 30vw));

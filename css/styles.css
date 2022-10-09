@@ -10,6 +10,7 @@ html{
 }
 
 Main{
+    min-height: 100%;
     background-image: url("../imgs/bg.svg");
     background-position-y: -15vh;
     background-size: 100% auto;
@@ -55,4 +56,81 @@ Main{
 
 body{
     background-color: var(--color-bg-primary);
+}
+
+
+.footer{
+    height: 25vh;
+    width: 100%;
+    min-height: 110px;
+    background-color: var(--color-bg-footer);
+    display: flex;
+    align-items: center;
+    color: var(--color-font-light);
+    font-family: Roboto;
+    justify-content: space-between;
+}
+
+.endereco{
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+}
+.endereco h2{
+    margin-bottom: 0.5em;
+}
+
+
+.endereco-local{
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    transition: 1s;
+}
+.endereco-local:hover{
+    color: var(--color-font-primary);
+}
+
+.email-footer{
+    margin-top: 3.5vh;
+    vertical-align: middle;
+}
+.email-footer i {
+    font-size: 0.8rem;
+}
+.email-footer span{
+    margin-left: 1vw;
+}
+
+@media (max-width: 700px){
+    .footer-sociais{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 0.8em;
+    }
+    .footer-sociais i {
+        margin-right: 2vw;
+    }
+}
+@media (min-width: 701px){
+    .footer-sociais{
+        margin-right: 10vw;
+    }
+}
+
+
+.endereco-local div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+}
+.iconsFooter{
+    transition: 1s;
+    cursor: pointer;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.iconsFooter:hover{
+    color: var(--color-font-primary);
 }
