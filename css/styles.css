@@ -10,7 +10,6 @@ html{
 }
 
 Main{
-    min-height: 100%;
     background-image: url("../imgs/bg.svg");
     background-position-y: -15vh;
     background-size: 100% auto;

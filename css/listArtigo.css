@@ -1,6 +1,6 @@
 Main{
     background-color: var(--color-bg-primary);
-    min-height: 100vh;
+    min-height: 75vh;
 }
 .artigosList{
     padding-top: 15vh;
