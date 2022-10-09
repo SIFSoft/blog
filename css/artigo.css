@@ -81,7 +81,7 @@
 
 #resumo{
     text-align: justify;
-    color: rgba(117, 117, 117, 1);
+    color: var(--color-font-dark);
 }
 img{
     margin-left: auto;
@@ -98,10 +98,18 @@ img{
     text-align: justify;
 }
 
-
-h2{
+.ArtigoTexto h2{
     margin-top: 1em;
     margin-bottom: 0.5em;
+    color: var(--color-bg-secondary);
+}
+
+.ArtigoTexto p{
+    color: var(--color-font-dark);
+}
+
+.ArtigoTexto img{
+    display: flex;
 }
 
 ol{
@@ -122,6 +130,7 @@ ol{
 .autorBox p{
     margin-left: 3%;
 }
+
 #nomeAutor{
     margin-left: 10px;
 }

@@ -113,7 +113,7 @@ Main{
     align-items: center;
     justify-content: center;
     font-family: Roboto;
-    padding-left: 2.5vw;
+    padding-left: 2.5vw; 
 }
 
 .card{ 
@@ -137,6 +137,7 @@ Main{
     background-color: var(--color-bg-primary);
     height: 40%;
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding-left: 5%;
     padding-right: 5%;
@@ -162,4 +163,18 @@ Main{
 
 .NomeAutor{
     font-size: 0.90em;
+}
+
+@media (max-width: 700px){
+    .artigosList{
+        padding-bottom: 5vh;
+        width: 97.5%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2em;
+        align-items: center;
+        justify-content: center;
+        font-family: Roboto;
+        padding-left: 2.5vw; 
+    }
 }
