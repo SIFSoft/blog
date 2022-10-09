@@ -1,9 +1,110 @@
 Main{
     background-color: var(--color-bg-primary);
     min-height: 75vh;
-}
-.artigosList{
     padding-top: 15vh;
+}
+
+.topPesquisa{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em;
+    font-family: Roboto;
+    color: var(--color-font-primary);
+    font-size: 1.1em;
+}
+.pesquisaLista{
+    width: 50%;
+    padding-right: 1.6em;
+    align-items: center;
+}
+.pesquisa{
+    display: flex;
+    background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+    border-radius: 20px;
+    width: 100%;
+    height: 2.2em;
+    padding-right: 15px;
+    padding-left: 15px;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+.entradaPesquisa:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.entradaPesquisa{
+    background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+    color: var(--color-font-primary);
+    border: none;
+    font-size: 0.9em;
+    width: 90%;
+    background-color: var();
+    height: 1.5em;
+    margin-right: 5px;
+}
+
+.iconPesquisa{
+    color: var(--color-font-secondary);
+    cursor: pointer;
+    font: 1.5em;
+    line-height: 1;
+    border-radius: 100%;
+    width: 1em;
+    height: 1em;
+    background-color: var(--color-bg-primary);
+    padding: 8px;
+}
+
+.resultados{
+    position: absolute;
+    width: 42.5%;
+    height: auto;
+    display: none;
+    max-height: 7em;
+    padding: 5px;
+    padding-top: 0;
+    overflow-y: scroll;
+    background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+    margin-left: 3px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: darkslategrey;
+    margin-left: 1em;
+}
+
+.resultados::-webkit-scrollbar {
+    width: 4px;
+}
+  
+.resultados::-webkit-scrollbar-track {
+    opacity: 0.7;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-right: 2px;
+}
+  
+.resultados::-webkit-scrollbar-thumb {
+    background-color: #929292;
+    border-radius: 15px;
+}
+
+.resultados li{
+    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.resultados li:hover{
+    background-color: darkgrey;
+}
+
+.artigosList{
     padding-bottom: 5vh;
     width: 97.5%;
     display: grid;
