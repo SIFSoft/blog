@@ -12,7 +12,7 @@ async function getAllArtigo(){
     data.map((artigo) =>{
         document.getElementById("artigosLoadID").style.visibility = 'hidden'
         document.getElementById("artigosLoadID").style.position = 'absolute'
-        document.getElementById("artigoGrid").innerHTML += `<a class="cardArtigo" href="artigo/?${artigo.slug}"> 
+        document.getElementById("artigoGrid").innerHTML += `<a class="cardArtigo" href="post/?${artigo.slug}"> 
             <div class="card">
               <div class="imgCard"></div>
               <div class="textosCard">
@@ -22,7 +22,7 @@ async function getAllArtigo(){
               </div>
             </div>
           </a>`
-          lista.innerHTML +=  `<li onclick="window.open('artigo/?${artigo.slug}', '_self')">${artigo.titulo}</li>`
+          lista.innerHTML +=  `<li onclick="window.open('post/?${artigo.slug}', '_self')">${artigo.titulo}</li>`
           titulos.push(artigo.titulo)
     });
     for(let i in titulos){
