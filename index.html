@@ -25,7 +25,7 @@
 <body class="light" id="conteiner">
     <header class="header" id="navbar">
         <div class="logo">
-          <a href="#inicio">
+          <a href="/">
             <svg
               class="logoImg"
               width="2032"
@@ -80,12 +80,19 @@
           <p>Artigos</p>
           <div class="pesquisaLista">
           <div class="pesquisa">
-              <input type="text" class="entradaPesquisa" id="entradaPesquisa" onkeyup="buscaArtigo(this.value)" onfocus="abrilista()" placeholder="Buscar...">
+              <input type="text" class="entradaPesquisa" id="entradaPesquisa" onkeyup="buscaArtigo(this.value)" onfocus="abrilista()" onfocusout="fecharLista()" placeholder="Buscar...">
               <i class="bi bi-search iconPesquisa"></i>
           </div>
-          <ul class="resultados" id="resultadosID">
+          <ul class="resultados" id="resultadosID" onmouseover="abrilista()">
                 
           </ul>
+        </div>
+          <div class="loading" id="artigosLoadID">
+            <div class="bolas">
+                <div></div>
+                <div></div>
+                <div></div>                    
+            </div>
         </div>
         </div>
         <div class="artigosList" id="artigoGrid">

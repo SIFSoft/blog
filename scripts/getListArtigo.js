@@ -8,8 +8,10 @@ async function getAllArtigo(){
     const data = await response.json();
     console.log(data)
     data.reverse()
-
+    document.getElementById("artigosLoadID").style.visibility = 'visibility'
     data.map((artigo) =>{
+        document.getElementById("artigosLoadID").style.visibility = 'hidden'
+        document.getElementById("artigosLoadID").style.position = 'absolute'
         document.getElementById("artigoGrid").innerHTML += `<a class="cardArtigo" href="artigo/?${artigo.slug}"> 
             <div class="card">
               <div class="imgCard"></div>
@@ -23,12 +25,15 @@ async function getAllArtigo(){
           lista.innerHTML +=  `<li onclick="window.open('artigo/?${artigo.slug}', '_self')">${artigo.titulo}</li>`
           titulos.push(artigo.titulo)
     });
+    for(i in titulos){
+      titulos[i].toLowerCase();
+    }
 }
 getAllArtigo();
 
 function buscaArtigo(text){
   let r = new RegExp(text, "g")
-  for(i in titulos){
+  for(let i in titulos){
     if(titulos[i].match(r)){
       lista.children[i].style.display = "block";
     }else{
@@ -41,5 +46,6 @@ function abrilista(){
   lista.style.display = "block"
 }
 function fecharLista(){
-    lista.style.display = "none"
+  setTimeout(function(){lista.style.display = "none"}, 100);
+    
 }

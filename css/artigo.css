@@ -129,8 +129,16 @@ ol{
 }
 .autorBox p{
     margin-left: 3%;
+    color: var(--color-font-secondary);
 }
 
 #nomeAutor{
     margin-left: 10px;
+    
+}
+
+.linkRede{
+    margin-left: 5px;
+    font-size: 1em;
+    color: var(--logo-fill);
 }

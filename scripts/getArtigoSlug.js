@@ -1,3 +1,10 @@
+let icons = {
+    'insta': '<i class="bi bi-instagram"></i>',
+    'face': '<i class="bi bi-facebook"></i>',
+    'linkedln': '<i class="bi bi-linkedin"></i>',
+    'github': '<i class="bi bi-github"></i>',
+    'twitter': '<i class="bi bi-twitter"></i>'
+}
 
 async function getArtigoSlug(){
     let url = window.location.href;
@@ -19,7 +26,7 @@ async function getArtigoSlug(){
         document.getElementById("titulo").textContent = data.titulo
         document.getElementById("resumo").textContent = data.resumo
         document.getElementById("texto").innerHTML = data.texto;
-        document.getElementById("autor").innerHTML = `<p>Autor: </p><p id="nomeAutor">${data.author}</p>`
+        document.getElementById("autor").innerHTML = `<p>Autor: </p><p id="nomeAutor">${data.author} <a class='linkRede' href='${data.linkRedeSocial}' target='_blank'>${icons[data.iconTypeRedeSocial]}</a></p>`
 
     }
 }
