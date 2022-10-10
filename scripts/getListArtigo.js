@@ -25,14 +25,14 @@ async function getAllArtigo(){
           lista.innerHTML +=  `<li onclick="window.open('artigo/?${artigo.slug}', '_self')">${artigo.titulo}</li>`
           titulos.push(artigo.titulo)
     });
-    for(i in titulos){
-      titulos[i].toLowerCase();
+    for(let i in titulos){
+      titulos[i] = titulos[i].toLowerCase();
     }
 }
 getAllArtigo();
 
 function buscaArtigo(text){
-  let r = new RegExp(text, "g")
+  let r = new RegExp(text.toLowerCase(), "g")
   for(let i in titulos){
     if(titulos[i].match(r)){
       lista.children[i].style.display = "block";
