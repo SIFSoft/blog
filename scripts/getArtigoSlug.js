@@ -14,7 +14,8 @@ async function getArtigoSlug(){
     const response = await fetch(api)
     const data = await response.json();
     console.log(data.detail)
-    if(data.detail == 'Não encontrado.'){
+
+    if(data.detail == 'Não encontrado.' || ! data.aprovado){
         document.getElementById("artigoID").innerHTML = `
         <div class="avisoErro">
             <i class="bi bi-exclamation-triangle-fill"></i>
