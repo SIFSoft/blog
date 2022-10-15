@@ -13,6 +13,9 @@ async function getAllArtigo() {
     if (artigo.aprovado) {
       document.getElementById("artigosLoadID").style.visibility = "hidden";
       document.getElementById("artigosLoadID").style.position = "absolute";
+      let dia = artigo.created.slice(8, 10) 
+      let mes = artigo.created.slice(5, 7)
+      let ano =artigo.created.slice(0, 4)
       document.getElementById(
         "artigoGrid"
       ).innerHTML += `<a class="cardArtigo" href="post/?${artigo.slug}"> 
@@ -23,7 +26,7 @@ async function getAllArtigo() {
               <div class="textosCard">
                 <span  class="tituloCard">${artigo.titulo}</span>
                 <span  class="NomeAutor">${artigo.author}</span>
-                <span  class="dataCard">Data: dd/mm/aaaa</span>
+                <span  class="dataCard">Data: ${dia} / ${mes} / ${ano}</span>
               </div>
             </div>
           </a>`;
