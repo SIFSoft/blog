@@ -186,20 +186,21 @@ Main{
 }
 
 .tituloCard{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1em;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-bottom: 3%;
 }
 
 .dataCard{
     text-align: center;
     margin-top: 0.5%;
     font-size: 0.85em;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .NomeAutor{
+    font-weight: 500;
     font-size: 0.90em;
 }
 
