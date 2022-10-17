@@ -3,7 +3,24 @@ Main{
     min-height: 60vh;
     padding-top: 15vh;
 }
-
+.inicioBlog{
+    width: 100%;
+    font-family: Roboto;
+    align-items: center;
+    font-size: 1.3em;
+    text-align: center;
+    color: var(--color-font-secondary);
+}
+.textoBlogInicio{
+    width: 90%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    max-width: 900px;
+    font-size: 1em;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
 .topPesquisa{
     width: 90%;
     display: flex;
