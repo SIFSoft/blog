@@ -1,7 +1,7 @@
 const url = "https://teste-api-sifsoft.herokuapp.com/artigo/?format=json";
 
-var titulos = [];
-var lista = document.getElementById("resultadosID");
+let titulos = [];
+let lista = document.getElementById("resultadosID");
 
 async function getAllArtigo() {
   const response = await fetch(url);
@@ -16,6 +16,10 @@ async function getAllArtigo() {
       let dia = artigo.created.slice(8, 10) 
       let mes = artigo.created.slice(5, 7)
       let ano =artigo.created.slice(0, 4)
+      let titulo = artigo.titulo
+      if(titulo.length > 30){
+        titulo = titulo.slice(0, 27) + '...'
+      }
       document.getElementById(
         "artigoGrid"
       ).innerHTML += `<a class="cardArtigo" href="post/?${artigo.slug}"> 
@@ -23,8 +27,8 @@ async function getAllArtigo() {
               <div class="imgCard">
                 <img src="${artigo.imagem_capa}" alt="">
               </div>
-              <div class="textosCard">
-                <span  class="tituloCard">${artigo.titulo}</span>
+              <div class="textosCard" title="${artigo.titulo}">
+                <span  class="tituloCard">${titulo}</span>
                 <span  class="NomeAutor">${artigo.author}</span>
                 <span  class="dataCard">Data: ${dia} / ${mes} / ${ano}</span>
               </div>
