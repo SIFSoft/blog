@@ -1,7 +1,7 @@
 Main{
     background-color: var(--color-bg-primary);
     min-height: 60vh;
-    padding-top: 15vh;
+    padding-top: 10vh;
 }
 .inicioBlog{
     width: 100%;
@@ -121,6 +121,7 @@ Main{
 
 .resultados li:hover{
     background-color: darkgrey;
+    color: #ebf1f1;
 }
 
 .artigosList{
@@ -155,10 +156,8 @@ Main{
     color: var(--color-font-secondary);
 	height: 200px;
     justify-content: end;
-	border-top-left-radius:15px;
-	border-top-right-radius:15px;
-	border-bottom-left-radius:15px;
-	border-bottom-right-radius:15px;
+	border-radius:10px;
+    text-decoration: none none;
 }
 
 .imgCard{
@@ -197,6 +196,31 @@ Main{
     margin-top: 0.5%;
     font-size: 0.85em;
     font-weight: 500;
+}
+
+.leiaMaisCard{
+    font-weight: 300;
+    margin-top: 0.45em;
+    opacity: 0;
+    transition: 0.7s;
+    justify-content: center;
+}
+
+.card:hover .textosCard{
+    transition: 0.5s;
+    transform: translateY(-1.5em);
+}
+.card:hover .leiaMaisCard{
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+.bi-arrow-right-short{
+    font-size: 1.3em;
+}
+
+.card:not(:hover) .leiaMaisCard{
+    opacity: 0;
 }
 
 .NomeAutor{

@@ -48,7 +48,7 @@ async function getArtigoSlug() {
     document.getElementById("titulo").textContent = data.titulo;
     document.getElementById("resumo").textContent = data.resumo;
     document.getElementById("texto").innerHTML = data.texto;
-    document.getElementById("autor").innerHTML = `<p id="nomeAutor"> Autor: ${data.author} <a class='linkRede' href='${data.linkRedeSocial}' target='_blank'>${icons[data.iconTypeRedeSocial]}</a></p><p>Criado em ${dia} de ${meses[mes]} de ${ano}.</p>`;
+    document.getElementById("autor").innerHTML = `<p id="nomeAutor" onclick="window.open('${data.linkRedeSocial}', '_blank')"> <strong>Autor: </strong>  ${data.author} <a class='linkRede' href='${data.linkRedeSocial}' target='_blank'>${icons[data.iconTypeRedeSocial]}</a></p><p>Criado em ${dia} de ${meses[mes]} de ${ano}.</p>`;
 
     document.getElementById("AtualizaçãoPost").textContent = `Atualizado em ${diaU} de ${meses[mesU]} de ${anoU}.`
   }

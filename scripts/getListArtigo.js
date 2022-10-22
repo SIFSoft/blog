@@ -31,6 +31,7 @@ async function getAllArtigo() {
                 <span  class="tituloCard">${titulo}</span>
                 <span  class="NomeAutor">${artigo.author}</span>
                 <span  class="dataCard">Data: ${dia} / ${mes} / ${ano}</span>
+                <span class="leiaMaisCard"><i>Leia mais </i><i class="bi bi-arrow-right-short"></i></span>
               </div>
             </div>
           </a>`;
