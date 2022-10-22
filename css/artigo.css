@@ -16,8 +16,6 @@ body{
     --font-resumo: #e2e1ebe7;
 
 }
-@media screen {
-    
 
 .compartilhar{
     position: fixed;
@@ -41,7 +39,7 @@ body{
 .compartilhar a{
     color: var(--logo-fill);
 }
-}
+
 .compartilhar a :hover{
     color: var(--color-font-primary);
 }
@@ -60,7 +58,7 @@ body{
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     color: var(--color-bg-secondary);
-    margin-top: 10vh;
+    margin-top: 4.2vh;
     padding-right: 2em;
     padding-left: 2em;
     margin-bottom: auto;
@@ -120,7 +118,7 @@ iframe{
     font-family: 'Roboto Slab', serif;
     width: 80vw;
     max-width: 950px;
-    min-height: 55vh;
+    min-height: 58vh;
     padding-right: 1.8rem;
     padding-left: 1.8rem;
     padding-bottom: 2vh;

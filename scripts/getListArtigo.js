@@ -69,12 +69,9 @@ function buscaArtigo(text) {
 function abrilista() {
   lista.style.display = "block";
 }
+
 function fecharLista() {
   setTimeout(function () {
     lista.style.display = "none";
   }, 100);
-}
-
-function botaoBusca(text){
-
 }
