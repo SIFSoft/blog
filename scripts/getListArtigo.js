@@ -7,7 +7,16 @@ async function getAllArtigo() {
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
-  data.reverse();
+  data.sort(function(a, b) { 
+      let valorA = a.created.slice(8, 10) 
+      valorA += a.created.slice(5, 7)
+      valorA += a.created.slice(0, 4)
+      let valorB = b.created.slice(8, 10) 
+      valorB += b.created.slice(5, 7)
+      valorB += b.created.slice(0, 4)
+    return valorB - valorA 
+  }
+  )
   document.getElementById("artigosLoadID").style.visibility = "visibility";
   data.map((artigo) => {
     if (artigo.aprovado) {
@@ -64,4 +73,8 @@ function fecharLista() {
   setTimeout(function () {
     lista.style.display = "none";
   }, 100);
+}
+
+function botaoBusca(text){
+
 }
