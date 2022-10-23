@@ -333,14 +333,18 @@ img{
 .giscus{
     height: 100%;
     padding-bottom: 2em;
+    height: auto;
 }
 
 .giscus-frame{
-    height: 100%;
-    min-height: 400px;
-
+    min-height: 600px;
+    height: auto;
 }
-
+.gsc-timeline{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
 .comentH1{
     color: var(--color-font-secondary);
 }
