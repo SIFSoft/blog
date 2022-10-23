@@ -25,7 +25,7 @@ function theme(valor) {
       "<i class='bi bi-brightness-high-fill theme' id='modeD' title='Modo Claro.'></i>";
     document.getElementById("conteiner").className = "dark";
     tema = 0;
-    giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'dark_tritanopia' } } }, 'https://giscus.app');
+    giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'transparent_dark' } } }, 'https://giscus.app');
   } else if (valor == 1) {
     document.getElementById("btnMode").value = 0;
     document.getElementById("btnMode").innerHTML =
