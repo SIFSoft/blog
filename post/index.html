@@ -19,9 +19,11 @@
     />
 
     <!--Script:-->
+    <script src="../scripts/theme.js" async></script>  
     <script src="../scripts/getArtigoSlug.js" defer></script>
-    <script src="../scripts/menu.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>  
     <script src="../scripts/compartilhar.js" defer></script>
+    <script src="../scripts/scroll.js" defer></script>
     
   </head>
   <body class="light" id="conteiner">
@@ -124,6 +126,13 @@
           </div>
         </div>
           <div class="voltarAoTopo"><div onclick="window.scrollTo(0, 0);">Voltar ao topo <i class="bi bi-caret-up"></i></div></div>
+
+          <div id="comentarios">
+            <h1 class="comentH1">Comentarios:</h1>
+            <div class="giscus">
+
+            </div>
+          </div>
       </section>
     </main>
     <footer class="footer">
@@ -160,7 +169,21 @@
       </div>
     </footer>
     <!--Script:-->
-    <script src="../scripts/theme.js" defer></script>
-    <script src="../scripts/scroll.js" defer></script>
+    <script src="https://giscus.app/client.js"
+        data-repo="SIFSoft/comentariosBlog"
+        data-repo-id="R_kgDOISpIRA"
+        data-category="General"
+        data-category-id="DIC_kwDOISpIRM4CSJ0Z"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme = "light"
+        data-lang="pt"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
   </body>
 </html>

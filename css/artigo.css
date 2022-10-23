@@ -331,3 +331,16 @@ img{
     font-style: normal;
     margin-bottom: 1em;
 }
+
+.giscus{
+    height: auto;
+}
+
+.giscus-frame{
+    height: auto;
+    min-height: 400px;
+}
+
+.comentH1{
+    color: var(--color-font-secondary);
+}
