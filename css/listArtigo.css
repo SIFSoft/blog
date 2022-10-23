@@ -1,3 +1,13 @@
+.light{
+    --font-paragrafo: #434a50;
+    --font-resumo: #2e343d;
+}
+
+.dark{
+    --font-paragrafo: #f7f7f7;
+    --font-resumo: #e2e1ebe7;
+}
+
 Main{
     background-color: var(--color-bg-primary);
     min-height: 65vh;
@@ -126,14 +136,14 @@ Main{
 
 .artigosList{
     padding-bottom: 5vh;
-    width: 97.5%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 30vw));
-    row-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 430px));
+    row-gap: 3em;
     align-items: center;
     justify-content: center;
+    place-items: center;
     font-family: Roboto;
-    padding-left: 2.5vw; 
 }
 
 .boxShandow{
@@ -145,17 +155,20 @@ Main{
 }
 
 .cardArtigo{
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
-    width: 300px;
+    width: 350px;
 }
+
 .card{ 
     overflow: hidden;
 	box-shadow:0px 15px 15px rgba(0, 0, 0, 0.267);
 	background-color: var(--color-bg-primary);
-    width:300px;
+    width: 350px;
     display: block;
     color: var(--color-font-secondary);
-	height: 200px;
+	height: 400px;
     justify-content: end;
 	border-radius:10px;
 }
@@ -163,18 +176,19 @@ Main{
 .imgCard{
     overflow: hidden;
     align-items: center;
-    height: 60%;
+    height: 40%;
 }
 
 .imgCard img{
+    min-width: 100%;
     width: 100%;
     height: auto;
+    min-height: 100%;
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
 }
 
 .textosCard{
     background-color: var(--color-bg-primary);
-    height: 40%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -183,28 +197,57 @@ Main{
     font-family: Roboto;
     margin-top: 1px;
     transition: 0.5s;
+    color: var(--color-font-primary);
 }
 
 .tituloCard{
     font-weight: 600;
+    color: var(--color-font-secondary);
+    font-size: 1.3em;
+    padding-top: 4%;
+}
+.tituloLinhaCard{
+    color: var(--color-font-primary);
+    width: 75%;
+    margin-top: 0.7em;
+    margin-bottom: 6%;
+}
+
+.boxAutorData{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5%;
+    color: var(--font-paragrafo);
+}
+
+.NomeAutor{
+    font-weight: 500;
     font-size: 1em;
-    padding-top: 2%;
-    padding-bottom: 3%;
+    text-align: left;
 }
 
 .dataCard{
-    text-align: center;
-    margin-top: 0.5%;
-    font-size: 0.85em;
+    text-align: right;
+    font-size: 1em;
     font-weight: 500;
 }
 
+.resumoCard{
+    text-align: justify;
+    opacity: 0.8;
+    color: var(--font-resumo);
+}
+
 .leiaMaisCard{
-    font-weight: 300;
-    margin-top: 0.45em;
+    font-weight: 800;
+    margin-top: 0.8em;
     opacity: 0;
     transition: 0.7s;
+    color: var(--color-font-primary);
     justify-content: center;
+    
+    font-size: 1.1em;
 }
 
 .card:hover .textosCard{
@@ -217,28 +260,27 @@ Main{
 }
 
 .bi-arrow-right-short{
-    font-size: 1.3em;
+    position: absolute;
+    font-size: 1.5em;
+    margin-top: -0.15em;
+    
 }
 
 .card:not(:hover) .leiaMaisCard{
     opacity: 0;
 }
 
-.NomeAutor{
-    font-weight: 500;
-    font-size: 0.90em;
-}
+
 
 @media (max-width: 700px){
-    .artigosList{
-        padding-bottom: 5vh;
-        width: 97.5%;
-        display: flex;
-        flex-direction: column;
-        row-gap: 2em;
-        align-items: center;
-        justify-content: center;
-        font-family: Roboto;
-        padding-left: 2.5vw; 
-    }
+.artigosList{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    font-family: Roboto;
+}
 }

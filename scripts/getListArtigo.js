@@ -6,7 +6,6 @@ let lista = document.getElementById("resultadosID");
 async function getAllArtigo() {
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
   data.sort(function(a, b) { 
       let valorA = a.created.slice(8, 10) 
       valorA += a.created.slice(5, 7)
@@ -26,9 +25,14 @@ async function getAllArtigo() {
       let mes = artigo.created.slice(5, 7)
       let ano =artigo.created.slice(0, 4)
       let titulo = artigo.titulo
-      if(titulo.length > 30){
-        titulo = titulo.slice(0, 27) + '...'
+      let resumo = artigo.resumo
+      if(titulo.length > 63){
+        titulo = titulo.slice(0, 59) + '...'
       }
+      if(resumo.length > 150){
+        resumo = resumo.slice(0, 147) + '...'
+      }
+
       document.getElementById(
         "artigoGrid"
       ).innerHTML += `<a class="cardArtigo" href="post/?${artigo.slug}"> 
@@ -38,8 +42,12 @@ async function getAllArtigo() {
               </div>
               <div class="textosCard" title="${artigo.titulo}">
                 <span  class="tituloCard">${titulo}</span>
+                <hr class="tituloLinhaCard">
+                <div class="boxAutorData">
                 <span  class="NomeAutor">${artigo.author}</span>
                 <span  class="dataCard">Data: ${dia} / ${mes} / ${ano}</span>
+                </div>
+                <span class="resumoCard">${resumo}</span>
                 <span class="leiaMaisCard"><i>Leia mais </i><i class="bi bi-arrow-right-short"></i></span>
               </div>
             </div>
