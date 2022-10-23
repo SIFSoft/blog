@@ -166,7 +166,6 @@ img{
     color: var(--color-font-dark);
     width: 100%;
     min-height: 100%;
-    text-align: justify;
     font-size: 1.3em;
     font-family: 'Roboto Slab', serif;
 }

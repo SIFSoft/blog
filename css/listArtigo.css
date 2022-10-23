@@ -145,6 +145,7 @@ Main{
 }
 
 .cardArtigo{
+    text-decoration: none;
     width: 300px;
 }
 .card{ 
@@ -157,7 +158,6 @@ Main{
 	height: 200px;
     justify-content: end;
 	border-radius:10px;
-    text-decoration: none none;
 }
 
 .imgCard{
