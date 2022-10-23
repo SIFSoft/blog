@@ -37,6 +37,8 @@ async function getArtigoSlug() {
             <a href="/"><i class="bi bi-house-fill"></i> Inicio.</a>
         </div>
         `;
+    document.getElementById("boxCompartilhar").style = 'opacity: 0;  pointer-events: none;'
+
   } else {
     let dia = data.created.slice(8, 10);
     let mes = data.created.slice(5, 7) - 1;

@@ -141,16 +141,17 @@ iframe{
 }
 
 .boxAbst{
-    width: 100%;
+    width: 90%;
     align-items: center;
     margin: auto;
     margin-bottom: 3rem;
 }
 
 #resumo{
-    font-size: 1.1em;
-    text-align: justify;
+    font-size: 1.15em;
+    text-align: center;   
     color: var(--font-resumo);
+    margin-bottom: 1em;
 }
 
 img{
