@@ -23,6 +23,9 @@ let meses = [
 async function getArtigoSlug() {
   let url = window.location.href;
   let slug = url.split("post/?")[1];
+  if(slug[slug.length - 1] === '='){
+    slug = slug.slice(0, slug.length - 2);
+  }
   let api = `https://teste-api-sifsoft.herokuapp.com/artigo/${slug}/?format=json`;
   const response = await fetch(api);
   const data = await response.json();
