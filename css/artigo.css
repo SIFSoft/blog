@@ -68,17 +68,29 @@ body{
     font-size: 3rem;
     color: #dc3545;
 }
-
-iframe{
-    display: block;
-    text-align: center;
-    width: 50%;
-    height: 23vw;
-    max-height: 13em;
-    min-height: 10em;
-    min-width: 18em;
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 450px) {
+    iframe{
+        display: block;
+        text-align: center;
+        width: 50%;
+        height: 23vw;
+        max-height: 13em;
+        min-height: 10em;
+        min-width: 18em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 449px) {
+    iframe{
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .avisoErro h1{
