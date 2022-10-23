@@ -208,6 +208,7 @@ Main{
 }
 .tituloLinhaCard{
     color: var(--color-font-primary);
+    background-color:var(--color-font-primary);
     width: 75%;
     margin-top: 0.7em;
     margin-bottom: 6%;
