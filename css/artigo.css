@@ -115,6 +115,7 @@ body{
     border-width: 0;
     color: var(--color-font-light);
     background-color: var(--color-bg-secondary);
+    text-decoration: none;
 }
 
 .avisoErro a:hover{
@@ -183,6 +184,7 @@ img{
     font-family: 'Roboto Slab', serif;
 }
 .ArtigoTexto a{
+    text-decoration: none;
     color: var(--font-link);
 }
 .ArtigoTexto h1{
