@@ -60,7 +60,7 @@ function setThemeComentarios(){
       giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'light_tritanopia' } } }, 'https://giscus.app');
     }else{
       giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'transparent_dark' } } }, 'https://giscus.app');
-    }}, 3000);
+    }}, 2000);
   }
 }
 
