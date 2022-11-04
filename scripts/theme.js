@@ -52,6 +52,7 @@ window.onload = function () {
   setThemeComentarios();
 };
 
+// Função para mudar o tema dos comentários conforme o tema do site ativo.
 function setThemeComentarios(){
   if (!giscusFrame) giscusFrame = document.querySelector('iframe.giscus-frame');
   if(giscusFrame != null){
@@ -60,7 +61,7 @@ function setThemeComentarios(){
       giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'light_tritanopia' } } }, 'https://giscus.app');
     }else{
       giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'transparent_dark' } } }, 'https://giscus.app');
-    }}, 2000);
+    }}, 1000);
   }
 }
 
