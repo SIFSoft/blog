@@ -33,6 +33,7 @@ Main{
     --color-bg-footer: #2e343d;
     --color-bg-menu-responsivo: #ffffff;
     --color-menu-icon: #15262E;
+    --color-bg-code: #f8f9fa;
 }
 
 .dark{
@@ -51,6 +52,7 @@ Main{
     --color-mode: #fff;
     --color-bg-menu-responsivo: #242A38;
     --color-menu-icon: #FFFFFF;
+    --color-bg-code: #6e768156;
 }
 
 body{
@@ -185,4 +187,12 @@ body{
     transform: scale(1);
     opacity: 1; 
   } 
+}
+
+pre{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--color-bg-code);
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
