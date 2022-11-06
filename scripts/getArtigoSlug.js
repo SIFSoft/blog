@@ -75,6 +75,12 @@ async function getArtigoSlug() {
       script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML";
       document.getElementsByTagName("head")[0].appendChild(script);
     }
+    if(document.querySelector('pre') != null){
+      for(const element of document.querySelectorAll('pre')){
+        element.className = 'prettyprint';
+      }
+      PR.prettyPrint();
+    }
   }
 }
 

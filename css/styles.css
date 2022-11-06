@@ -190,9 +190,14 @@ body{
 }
 
 pre{
+    overflow-x: auto;
     padding: 15px;
     border-radius: 5px;
-    background-color: var(--color-bg-code);
+    background-color: var(--color-bg-code) !important;
     margin-bottom: 1em;
     margin-top: 1em;
+}
+
+.pln, .pun{
+    color: var(--color-font-dark) !important;
 }
