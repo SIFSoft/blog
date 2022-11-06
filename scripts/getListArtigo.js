@@ -54,12 +54,8 @@ async function getAllArtigo() {
   const response = await fetch(url);
   const data = await response.json();
   data.sort(function (a, b) {
-    let valorA = a.created.slice(8, 10);
-    valorA += a.created.slice(5, 7);
-    valorA += a.created.slice(0, 4);
-    let valorB = b.created.slice(8, 10);
-    valorB += b.created.slice(5, 7);
-    valorB += b.created.slice(0, 4);
+    let valorA = new Date(a.created);
+    let valorB = new Date(b.created);
     return valorB - valorA;
   });
   document.getElementById("artigosLoadID").style.visibility = "visibility";
