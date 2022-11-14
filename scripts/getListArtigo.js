@@ -74,9 +74,7 @@ async function getAllArtigo() {
   }else{
     document.getElementById("artigosLoadID").style.visibility = "hidden";
     document.getElementById("artigosLoadID").style.position = "absolute";
-    document.getElementById(
-      "artigoGrid"
-    ).innerHTML = `<div class="pesquisaNotFound"><h3><i class="bi bi-robot"></i> Ops, essa página ainda não possui posts!</h3><div>`;
+    document.getElementById("artigoGrid").innerHTML = `<div class="pesquisaNotFound"><h3><i class="bi bi-robot"></i> Ops, essa página ainda não possui posts!</h3><div>`;
   }
 }
 
@@ -111,8 +109,12 @@ function buscaArtigoLista() {
   let text = document.getElementById("entradaPesquisa").value;
   if (text === "") {
     document.getElementById("artigoGrid").innerHTML = "";
-    for (const element of listaPost) {
-      cardArtigo(element);
+    if(listaPost.length > 0){
+      for (const element of listaPost) {
+        cardArtigo(element);
+      }
+    }else{
+      document.getElementById("artigoGrid").innerHTML = `<div class="pesquisaNotFound"><h3><i class="bi bi-robot"></i> Ops, essa página ainda não possui posts!</h3><div>`;
     }
   } else {
     let r = new RegExp(text.toLowerCase(), "g");
