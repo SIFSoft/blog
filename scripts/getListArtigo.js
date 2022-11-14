@@ -53,22 +53,30 @@ function cardArtigo(artigo) {
 async function getAllArtigo() {
   const response = await fetch(url);
   const data = await response.json();
-  data.sort(function (a, b) {
-    let valorA = new Date(a.created);
-    let valorB = new Date(b.created);
-    return valorB - valorA;
-  });
-  document.getElementById("artigosLoadID").style.visibility = "visibility";
-  data.map((artigo) => {
-    if (artigo.aprovado) {
-      listaPost.push(artigo);
-      cardArtigo(artigo);
-      lista.innerHTML += `<li onclick="window.open('post/?${artigo.slug}', '_self')">${artigo.titulo}</li>`;
-      titulos.push(artigo.titulo);
+  if(data.length > 0){
+    data.sort(function (a, b) {
+      let valorA = new Date(a.created);
+      let valorB = new Date(b.created);
+      return valorB - valorA;
+    });
+    document.getElementById("artigosLoadID").style.visibility = "visibility";
+    data.map((artigo) => {
+      if (artigo.aprovado) {
+        listaPost.push(artigo);
+        cardArtigo(artigo);
+        lista.innerHTML += `<li onclick="window.open('post/?${artigo.slug}', '_self')">${artigo.titulo}</li>`;
+        titulos.push(artigo.titulo);
+      }
+    });
+    for (let i in titulos) {
+      titulos[i] = titulos[i].toLowerCase();
     }
-  });
-  for (let i in titulos) {
-    titulos[i] = titulos[i].toLowerCase();
+  }else{
+    document.getElementById("artigosLoadID").style.visibility = "hidden";
+    document.getElementById("artigosLoadID").style.position = "absolute";
+    document.getElementById(
+      "artigoGrid"
+    ).innerHTML = `<div class="pesquisaNotFound"><h3><i class="bi bi-robot"></i> Ops, essa página ainda não possui posts!</h3><div>`;
   }
 }
 
