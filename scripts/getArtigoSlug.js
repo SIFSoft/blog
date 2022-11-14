@@ -29,7 +29,7 @@ async function getArtigoSlug() {
   let slug = url.split("post/?")[1];
   slug = slug.replace("=", "");
 
-  let api = `https://teste-api-sifsoft.herokuapp.com/artigo/${slug}/?format=json`;
+  let api = `https://sifsoft-api.herokuapp.com/post/${slug}/?format=json`;
   const response = await fetch(api);
   const data = await response.json();
 

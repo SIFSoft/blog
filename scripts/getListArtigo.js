@@ -1,4 +1,4 @@
-const url = "https://teste-api-sifsoft.herokuapp.com/artigo/?format=json";
+const url = "https://sifsoft-api.herokuapp.com/post/?format=json";
 
 let titulos = [];
 let lista = document.getElementById("resultadosID");
