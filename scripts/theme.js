@@ -63,7 +63,7 @@ function setThemeComentarios(){
       giscusFrame.contentWindow.postMessage({ giscus: { setConfig: { theme: 'transparent_dark' } } }, 'https://giscus.app');
     }
     console.clear();
-    }, 1000);
+    }, 1500);
   }
 }
 
