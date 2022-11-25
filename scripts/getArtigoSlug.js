@@ -32,7 +32,7 @@ async function getArtigoSlug() {
   }else{
     slug = slug.replace("=", "");
   }
-  let api = `https://sifsoft-api.herokuapp.com/post/${slug}/?format=json`;
+  let api = `https://sifsoft-api.fly.dev/post/${slug}/?format=json`;
   const response = await fetch(api);
   const data = await response.json();
 
