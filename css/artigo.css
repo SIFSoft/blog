@@ -27,7 +27,7 @@ body{
     border-radius: 20px;
     display: flex;
     width: 0.9em;
-    height: 7em;
+    height: 9em;
     font-size: 1.2em;
     flex-direction: column;
     justify-content: space-between;
@@ -35,14 +35,33 @@ body{
     box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.205);
     opacity: 1;
     transition: 0.5s;
+    overflow-x: hidden;
 }
 
 .compartilhar a{
     color: var(--logo-fill);
+    display: flex;
+    width: 100%;
+    text-decoration:none;    
+    justify-content: space-between;
+    align-items: center;
+}
+.compartilhar a p{ 
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0.6em;
+    width: 100%;
+    font-size: 0.8em;
+    text-align: center;
 }
 
-.compartilhar a :hover{
-    color: var(--color-font-primary);
+.compartilhar a:hover{
+    color: var(--color-font-primary) !important;
+}
+
+.compartilhar:hover{
+    width: 5.5em;
+    border-radius: 20px 15px 15px 20px;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.349);
 }
 
 .conteudo{
