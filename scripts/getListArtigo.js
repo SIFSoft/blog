@@ -71,7 +71,8 @@ async function getAllArtigo() {
     for (let i in titulos) {
       titulos[i] = titulos[i].toLowerCase();
     }
-  }else{
+  }
+  if(titulos.length == 0){
     document.getElementById("artigosLoadID").style.visibility = "hidden";
     document.getElementById("artigosLoadID").style.position = "absolute";
     document.getElementById("artigoGrid").innerHTML = `<div class="pesquisaNotFound"><h3><i class="bi bi-robot"></i> Ops, essa página ainda não possui posts!</h3><div>`;
