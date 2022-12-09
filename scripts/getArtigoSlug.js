@@ -58,15 +58,31 @@ async function getArtigoSlug() {
     document.getElementById("titulo").textContent = data.titulo;
     document.getElementById("resumo").textContent = data.resumo;
     document.getElementById("texto").innerHTML = data.texto;
+    console.log(data.image_perfil_author);
+    if(data.image_perfil_author == 'Sem foto'){
+      document.getElementById("autor").innerHTML = `<div id='autorDados' class='perfilAutor'>
+        <svg viewBox="0 0 65 65" fill="none">
+          <path d="M47 19C47 27.2843 40.2843 34 32 34C23.7157 34 17 27.2843 17 19C17 10.7157 23.7157 4 32 4C40.2843 4 47 10.7157 47 19Z" fill="#217C97"/>
+          <path d="M18.0863 34.4228C8.52362 36.5124 2 40.6888 2 45.5C2 45.8133 2.02766 46.1238 2.08201 46.4313C2.02865 46.6116 2 46.8024 2 47V56C2 58.2091 3.79086 60 6 60H58C60.2091 60 62 58.2091 62 56V47C62 46.8024 61.9714 46.6116 61.918 46.4313C61.9723 46.1238 62 45.8133 62 45.5C62 40.5612 55.1257 36.2913 45.1463 34.261C41.9388 36.5408 37.0176 38 31.5 38C26.1141 38 21.2965 36.6097 18.0863 34.4228Z" fill="#217C97"/>
+        </svg>
+      </div>`
+    }else{
+      document.getElementById("autor").innerHTML = `<div id='autorDados' class='perfilAutor'>
+          <img src="${data.image_perfil_author}" alt="">
+      </div>`
+    }
+    
+    
     document.getElementById(
-      "autor"
-    ).innerHTML = `<p id="nomeAutor" onclick="window.open('${
+      "autorDados"
+    ).innerHTML += `<p id="nomeAutor" onclick="window.open('${
       data.linkRedeSocial
     }', '_blank')"> <strong>Autor: </strong>  ${
       data.author
     } <a class='linkRede' href='${data.linkRedeSocial}' target='_blank'>${
       icons[data.iconTypeRedeSocial]
-    }</a></p><p>Criado em ${dia} de ${meses[mes]} de ${ano}.</p>`;
+    }</a></p>`
+    document.getElementById("autor").innerHTML +=`<p class='criadoPost'>Criado em ${dia} de ${meses[mes]} de ${ano}.</p>`;
 
     document.getElementById(
       "AtualizaçãoPost"
