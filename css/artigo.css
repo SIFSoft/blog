@@ -102,11 +102,6 @@ body {
   }
 }
 
-.instagram-media{
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
 @media (max-width: 449px) {
   .videoYoutube {
     display: block;

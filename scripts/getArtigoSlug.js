@@ -55,6 +55,7 @@ async function getArtigoSlug() {
     let mesU = data.update.slice(5, 7) - 1;
     let anoU = data.update.slice(0, 4);
 
+    document.getElementById("tituloPage").innerHTML = data.titulo + ' - blog';
     document.getElementById("titulo").textContent = data.titulo;
     document.getElementById("resumo").textContent = data.resumo;
     document.getElementById("texto").innerHTML = data.texto;
