@@ -58,7 +58,6 @@ async function getArtigoSlug() {
     document.getElementById("titulo").textContent = data.titulo;
     document.getElementById("resumo").textContent = data.resumo;
     document.getElementById("texto").innerHTML = data.texto;
-    console.log(data.image_perfil_author);
     if(data.image_perfil_author == 'Sem foto'){
       document.getElementById("autor").innerHTML = `<div id='autorDados' class='perfilAutor'>
         <svg viewBox="0 0 65 65" fill="none">
@@ -87,16 +86,33 @@ async function getArtigoSlug() {
     document.getElementById(
       "AtualizaçãoPost"
     ).textContent = `Atualizado em ${diaU} de ${meses[mesU]} de ${anoU}.`;
+
     
+
     if(document.querySelector('.math-tex') != null){
       let script = document.createElement("script");
       script.type = "text/javascript";
       script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML";
       document.getElementsByTagName("head")[0].appendChild(script);
     }
+    if(document.querySelector('blockquote') != null){
+      let script = document.createElement("script");
+      script.type = "text/javascript";
+      script.async = true;
+      script.src = "https://www.instagram.com/embed.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    }
     if(document.querySelector('pre') != null){
       for(const element of document.querySelectorAll('pre')){
         element.className = 'prettyprint';
+      }
+      PR.prettyPrint();
+    }
+    if(document.querySelector('iframe') != null){
+      for(const element of document.querySelectorAll('iframe')){
+        if (element.src.indexOf('youtube.com') > -1){
+          element.className = 'videoYoutube';
+        }
       }
       PR.prettyPrint();
     }
