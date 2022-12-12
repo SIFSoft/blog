@@ -1,7 +1,7 @@
 
 // Função para adicionar o link nos botões de compartilhamento na página de post.
 function compartilhamentoLinks () {
-  document.querySelector("#instagramLink").href = "https://www.instagram.com/?url=" + window.location.href;
+  document.querySelector("#whatsappLink").href = `whatsapp://send?text="${window.location.href}"`;
   document.querySelector("#twitterLink").href =  "https://twitter.com/intent/tweet?text="+ window.location.href;
   document.querySelector("#facebookLink").href = "https://www.facebook.com/sharer/sharer.php?u=" + window.location.href;
   document.querySelector("#linkdinLink").href =  "https://www.linkedin.com/shareArticle?mini=true&url=" + window.location.href;
