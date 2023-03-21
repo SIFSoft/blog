@@ -31,7 +31,8 @@ function theme(valor) {
     themeLink("linkHome");
     themeLink("linkDocs");
     themeLink("linkInicio");
-    themeLink("linkEquipe"); 
+    themeLink("linkEquipe");
+    themeLink("linkSobre");
 
   } else if (valor == 1) {
     document.getElementById("btnMode").value = 0;
@@ -46,6 +47,7 @@ function theme(valor) {
     themeLink("linkDocs");
     themeLink("linkInicio")
     themeLink("linkEquipe");
+    themeLink("linkSobre");
     
     if (linkDocs.href.includes("?mode=dark"))
       linkDocs.href = linkDocs.href.replace("?mode=dark", "?mode=light");
