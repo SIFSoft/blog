@@ -17,11 +17,7 @@ function lerArquivoRanque() {
 }
 
 // Função para mudar o tema conforme o valor do checkbox ao ser clicado.
-function theme(valor) {
-  const linkSite = document.getElementById("linkHome");
-  const linkDocs = document.getElementById("linkDocs");
-  const linkSiteMenu = document.getElementById("linkInicio");
-  if (!giscusFrame) giscusFrame = document.querySelector("iframe.giscus-frame");
+function theme(valor) {  
   if (valor == 0) {
     document.getElementById("btnMode").value = 1;
     document.getElementById("btnMode").innerHTML =
@@ -29,49 +25,42 @@ function theme(valor) {
     document.getElementById("conteiner").className = "dark";
     tema = 0;
 
+    setThemeComentarios();
+
     // passagem do tema pelo link
-    if (linkSite.href.includes("?mode=light"))
-      linkSite.href = linkSite.href.replace("?mode=light", "?mode=dark");
-    else if (!linkSite.href.includes("?mode="))
-      linkSite.href = linkSite.href + "?mode=dark";
-    linkSiteMenu.href = linkSite.href;
+    themeLink("linkHome");
+    themeLink("linkDocs");
+    themeLink("linkInicio");
+    themeLink("linkEquipe"); 
 
-    if (linkDocs.href.includes("?mode=light"))
-      linkDocs.href = linkDocs.href.replace("?mode=light", "?mode=dark");
-    else if (!linkDocs.href.includes("?mode="))
-      linkDocs.href = linkDocs.href + "?mode=dark";
-
-    if (giscusFrame != null)
-      giscusFrame.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: "transparent_dark" } } },
-        "https://giscus.app"
-      );
   } else if (valor == 1) {
     document.getElementById("btnMode").value = 0;
     document.getElementById("btnMode").innerHTML =
       "<i class='bi bi-moon-stars-fill theme' id='modeC' title='Modo Escuro.'></i>";
     document.getElementById("conteiner").className = "light";
     tema = 1;
+    setThemeComentarios();
+
     // passagem do tema pelo link
-    if (linkSite.href.includes("?mode=dark"))
-      linkSite.href = linkSite.href.replace("?mode=dark", "?mode=light");
-    else if (!linkSite.href.includes("?mode="))
-      linkSite.href = linkSite.href + "?mode=light";
-
-    linkSiteMenu.href = linkSite.href;
-
+    themeLink("linkHome");
+    themeLink("linkDocs");
+    themeLink("linkInicio")
+    themeLink("linkEquipe");
+    
     if (linkDocs.href.includes("?mode=dark"))
       linkDocs.href = linkDocs.href.replace("?mode=dark", "?mode=light");
     else if (!linkDocs.href.includes("?mode="))
       linkDocs.href = linkDocs.href + "?mode=light";
-    if (giscusFrame != null)
-
-      giscusFrame.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: "light_tritanopia" } } },
-        "https://giscus.app"
-      );
   }
   salvaModo(tema);
+}
+
+function themeLink(idLink){
+  const link = document.getElementById(idLink);
+  if (link.href.includes("?mode=dark"))
+    link.href = link.href.replace("?mode=dark", "?mode=light");
+  else if (!link.href.includes("?mode="))
+    link.href = link.href + "?mode=light";
 }
 // Função para iniciar o tema salvo no localstorage, ao abrir a página se houver.
 window.onload = function () {
@@ -88,6 +77,7 @@ window.onload = function () {
     tema = 1;
     window.location.href = url.replace("?mode=light", "");
   }
+  
   theme(tema);
 
   setInterval(function () {
@@ -95,26 +85,29 @@ window.onload = function () {
     document.getElementById("conteiner").style.transition = "0.5s ease-in-out";
   }, 700);
 
-  setThemeComentarios();
+  if(url.includes("/post"))
+    getArtigoSlug();
 
+  setThemeComentarios();
 };
 
 // Função para mudar o tema dos comentários conforme o tema do site ativo.
 function setThemeComentarios() {
-  if (!giscusFrame) giscusFrame = document.querySelector("iframe.giscus-frame");
-  if (giscusFrame != null) {
-    setTimeout(function () {
-      if (tema == 1) {
-        giscusFrame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme: "light_tritanopia" } } },
-          "https://giscus.app"
-        );
-      } else {
-        giscusFrame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme: "transparent_dark" } } },
-          "https://giscus.app"
-        );
-      }
-    }, 2500);
-  }
+  const url = window.location.href;
+  if(url.includes("/post/?")){
+    if (!giscusFrame) giscusFrame = document.querySelector("iframe.giscus-frame");
+    if (giscusFrame != null) {
+        if (tema == 1) {
+          giscusFrame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: "light_tritanopia" } } },
+            "https://giscus.app"
+          );
+        } else {
+          giscusFrame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: "transparent_dark" } } },
+            "https://giscus.app"
+          );
+        }
+    }
+}
 }

@@ -12,21 +12,23 @@
     <link href="../css/navbar.css" rel="stylesheet" type="text/css" />
     <link href="../css/artigo.css" rel="stylesheet" type="text/css" />
 
-    <!--Frameworks:-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
-    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=sunburst"></script>
     <!--Script:-->
+    <script src="../scripts/getArtigoSlug.js" async></script>
     <script src="../scripts/theme.js" async></script>  
-    <script src="../scripts/getArtigoSlug.js" defer></script>
     <script src="../scripts/menu.js" defer></script>  
     <script src="../scripts/compartilhar.js" defer></script>
     <script src="../scripts/scroll.js" defer></script>
+
+    <!--Frameworks:-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=sunburst"></script>
+    
     
   </head>
   <body class="light" id="conteiner">
     <header class="header" id="navbar">
       <div class="logo">
-        <a href="https://sifsoft.com.br">
+        <a id="linkHome" href="https://sifsoft.com.br">
           <svg
             class="logoImg"
             width="2032"
@@ -53,9 +55,9 @@
           <li class="botãoMode" id="btnMode" onclick="theme(this.value);" value=0>
           <li class="item" id="btnInicio"><a class="links" id="linkInicio" href="https://sifsoft.com.br/#inicio">Inicio</a></li>
           <li class="item" id="btnSobre"><a class="links" id="linkSobre" href="https://sifsoft.com.br/#sobre">Sobre</a></li>
-          <li class="item" id="btnDocs"><a class="links" href="https://sifsoft.com.br/#equipe">Equipe</a></li>
-          <li class="item" id="btnDocs"><a class="links" href="https://sifsoft.com.br/documentos">Docs</a></li>
-          <li class="itemDesabilitado" id="btnInicio"><a class="links" id="linkInicio" href="/">Blog</a></li>
+          <li class="item" id="btnDocs"><a class="links" id="linkEquipe" href="https://sifsoft.com.br/#equipe">Equipe</a></li>
+          <li class="item" id="btnDocs"><a class="links"  id="linkDocs" href="https://sifsoft.com.br/documentos">Docs</a></li>
+          <li class="itemDesabilitado" id="btnInicio"><a class="links" id="linkInicioBlog" href="/">Blog</a></li>
         </ul>
         <div class="menu-btn">
           <i class="bi bi-list" id="menu-icon" onclick="menuVisivel()"></i>
@@ -110,7 +112,7 @@
 
           <div id="comentarios">
             <h1 class="comentH1">Comentarios:</h1>
-            <div class="giscus">
+            <div class="giscus" onloadstart="setThemeComentarios();">
 
             </div>
           </div>
@@ -164,8 +166,6 @@
         data-lang="pt"
         data-loading="lazy"
         crossorigin="anonymous"
-        async></script>
-        
-        
+        async></script>        
   </body>
 </html>
