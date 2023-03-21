@@ -59,10 +59,17 @@ function theme(valor) {
 
 function themeLink(idLink){
   const link = document.getElementById(idLink);
-  if (link.href.includes("?mode=dark"))
-    link.href = link.href.replace("?mode=dark", "?mode=light");
-  else if (!link.href.includes("?mode="))
-    link.href = link.href + "?mode=light";
+  if(tema == 1){
+    if (link.href.includes("?mode=dark"))
+      link.href = link.href.replace("?mode=dark", "?mode=light");
+    else if (!link.href.includes("?mode="))
+      link.href = link.href + "?mode=light";
+  }else{
+    if (link.href.includes("?mode=light"))
+      link.href = link.href.replace("?mode=light", "?mode=dark");
+    else if (!link.href.includes("?mode="))
+      link.href = link.href + "?mode=dark";
+  }
 }
 // Função para iniciar o tema salvo no localstorage, ao abrir a página se houver.
 window.onload = function () {
