@@ -1,4 +1,4 @@
-const url = "https://sifsoft-api.fly.dev/post/?format=json";
+const url = "https://sifsoft-api-production.up.railway.app/post/?format=json";
 
 let titulos = [];
 let lista = document.getElementById("resultadosID");
